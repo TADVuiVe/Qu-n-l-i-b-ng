@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Lịch tập luyện</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/vi/thumb/1/1d/Manchester_City_FC_logo.svg/1024px-Manchester_City_FC_logo.svg.png"
+</head>
+<body>
+  <header><h1>⚽ Quản Lý Đội Bóng</h1></header>
+
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <h3 class="page-title">Lịch tập luyện</h3>
+      <a href="index.html" class="btn" style="background:transparent;color:var(--muted);border-radius:8px;padding:8px 12px;border:1px solid rgba(255,255,255,0.03);text-decoration:none">⟵ Trở về</a>
+    </div>
+
+    <div class="panel">
+      <div class="form-row">
+        <div class="col"><input type="date" id="t_date"></div>
+        <div class="col"><input type="text" id="t_topic" placeholder="Nội dung buổi tập"></div>
+        <div class="col"><input type="text" id="t_place" placeholder="Địa điểm"></div>
+      </div>
+      <div style="margin-top:12px">
+        <button class="btn btn-primary" id="saveTraining">Thêm lịch</button>
+      </div>
+
+      <div class="table-wrap" style="margin-top:14px">
+        <table id="trainingTable">
+          <thead><tr><th>Ngày</th><th>Nội dung</th><th>Địa điểm</th><th>Thao tác</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>app.renderTrainings();</script>
+</body>
+</html>

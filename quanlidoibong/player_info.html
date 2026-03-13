@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thông Tin Cầu Thủ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>⚽ Quản Lý Đội Bóng</h1>
+    </header>
+
+    <div class="container">
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+            <h2 class="page-title">Thông Tin Cầu Thủ</h2>
+
+            <a href="index.html" class="btn"
+                style="background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.1)">
+                ⟵ Trở về
+            </a>
+        </div>
+
+        <div class="panel">
+
+            <h3 style="color:var(--accent);margin-bottom:10px;">Quản lý dữ liệu cầu thủ (CSV)</h3>
+
+            <div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap;">
+                <div style="flex:1;min-width:200px;">
+                    <label for="csvInput" class="btn"
+                        style="display:inline-block;cursor:pointer;background:var(--accent);color:#000;padding:10px 20px;border-radius:8px;text-align:center;">
+                        📁 Chọn file CSV
+                    </label>
+                    <input type="file" id="csvInput" accept=".csv" style="display:none;">
+                </div>
+
+                <button id="exportBtn" class="btn"
+                    style="background:#4CAF50;color:white;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;">
+                    💾 Xuất CSV
+                </button>
+
+                <button id="clearBtn" class="btn btn-danger"
+                    style="background:var(--danger);color:white;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;">
+                    🗑️ Xóa tất cả
+                </button>
+            </div>
+
+            <p style="color:var(--muted);font-size:14px;margin-bottom:16px;">
+                * Format CSV: ID, Tên, Vị trí, Ngày sinh, Chiều cao, Cân nặng, Số áo
+            </p>
+
+            <hr style="border-color:#222;margin:20px 0;">
+
+            <h3 style="color:var(--accent);margin-bottom:10px;">Danh sách cầu thủ</h3>
+
+            <table class="table-dark">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên</th>
+                        <th>Vị trí</th>
+                        <th>Ngày sinh</th>
+                        <th>Chiều cao (cm)</th>
+                        <th>Số áo</th>
+                    </tr>
+                </thead>
+                <tbody id="playerTableBody"></tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="player_info.js"></script>
+
+</body>
+
+</html>

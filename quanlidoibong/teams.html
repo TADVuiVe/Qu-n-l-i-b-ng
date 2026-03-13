@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <title>Đội hình & Chiến thuật</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon"
+    href="https://upload.wikimedia.org/wikipedia/vi/thumb/1/1d/Manchester_City_FC_logo.svg/1024px-Manchester_City_FC_logo.svg.png">
+</head>
+
+<body>
+  <header>
+    <h1>⚽ Quản Lý Đội Bóng</h1>
+  </header>
+
+  <div class="container">
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+      <h3 class="page-title">Đội hình & Chiến thuật</h3>
+      <a href="index.html" class="btn"
+        style="background:transparent;color:var(--muted);border-radius:8px;padding:8px 12px;border:1px solid rgba(255,255,255,0.03);text-decoration:none">⟵
+        Trở về</a>
+    </div>
+
+    <div class="panel">
+      <div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap;align-items:center;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <label for="formationSelect" style="color:var(--accent);font-weight:600;white-space:nowrap;">⚙️ Sơ đồ:</label>
+          <select id="formationSelect" class="btn"
+            style="background:#1a1a1a;color:var(--accent);padding:10px 16px;border:1px solid rgba(0,234,255,0.3);border-radius:8px;cursor:pointer;min-width:120px;">
+            <option value="4-3-3">4-3-3</option>
+            <option value="4-4-2">4-4-2</option>
+            <option value="3-5-2">3-5-2</option>
+            <option value="4-2-3-1">4-2-3-1</option>
+            <option value="3-4-3">3-4-3</option>
+            <option value="5-3-2">5-3-2</option>
+          </select>
+        </div>
+        <button id="saveFormationBtn" class="btn"
+          style="background:var(--accent);color:#000;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;">
+          💾 Lưu đội hình
+        </button>
+        <button id="resetFormationBtn" class="btn btn-danger"
+          style="background:var(--danger);color:white;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;">
+          🔄 Reset đội hình
+        </button>
+      </div>
+
+      <p style="color:var(--muted);margin-bottom:20px;">Chọn sơ đồ chiến thuật và kéo cầu thủ từ danh sách vào vị trí
+        tương ứng trên sân.</p>
+
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+
+        <!-- DANH SÁCH CẦU THỦ -->
+        <div class="panel" style="flex:1;min-width:300px;background:#0b0b0b;">
+          <h4 style="color:var(--accent);margin-bottom:12px;">Danh sách cầu thủ</h4>
+          <div id="teamPlayersList" style="min-height:500px;background:#050505;border-radius:8px;
+                      padding:12px;border:1px solid rgba(255,255,255,0.05);
+                      overflow-y:auto;max-height:600px;">
+          </div>
+        </div>
+
+        <!-- SÂN & ĐỘI HÌNH -->
+        <div class="panel" style="flex:2;min-width:400px;background:#0b0b0b;">
+          <h4 style="color:var(--accent);margin-bottom:12px;" id="formationTitle">Sân (Sơ đồ 4-3-3)</h4>
+
+          <div id="formationField" class="football-field">
+            <!-- Nội dung sẽ được tạo động bởi JavaScript -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="teams.js"></script>
+</body>
+
+</html>

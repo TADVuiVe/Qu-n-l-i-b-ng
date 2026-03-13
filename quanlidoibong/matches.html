@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Quản Lý Trận Đấu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/vi/thumb/1/1d/Manchester_City_FC_logo.svg/1024px-Manchester_City_FC_logo.svg.png"
+</head>
+<body>
+  <header><h1>⚽ Quản Lý Đội Bóng</h1></header>
+
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <h3 class="page-title">Quản lý Trận Đấu</h3>
+      <a href="index.html" class="btn" style="background:transparent;color:var(--muted);border-radius:8px;padding:8px 12px;border:1px solid rgba(255,255,255,0.03);text-decoration:none">⟵ Trở về</a>
+    </div>
+
+    <div class="panel">
+      <div class="table-wrap">
+        <table id="matchesTable">
+          <thead><tr><th style="width:35%">Đối thủ</th><th style="width:25%">Ngày</th><th style="width:30%">Sân</th><th style="width:10%">Thao tác</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div style="height:18px"></div>
+
+    <div class="panel">
+      <h4 style="color:var(--accent);margin:0 0 12px">Thêm trận đấu</h4>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" id="m_enemy" placeholder="Đối thủ">
+        </div>
+        <div class="col">
+          <input type="date" id="m_date">
+        </div>
+        <div class="col">
+          <input type="text" id="m_stadium" placeholder="Sân thi đấu">
+        </div>
+      </div>
+
+      <div style="margin-top:14px">
+        <button class="btn btn-primary" id="saveMatchBtn">Thêm</button>
+        <button class="btn" id="clearMatchBtn" style="margin-left:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)">Xoá form</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>app.renderMatches();</script>
+</body>
+</html>

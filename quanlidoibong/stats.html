@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Thống Kê</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/vi/thumb/1/1d/Manchester_City_FC_logo.svg/1024px-Manchester_City_FC_logo.svg.png"
+</head>
+<body>
+  <header><h1>⚽ Quản Lý Đội Bóng</h1></header>
+
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <h3 class="page-title">Thống kê</h3>
+      <a href="index.html" class="btn" style="background:transparent;color:var(--muted);border-radius:8px;padding:8px 12px;border:1px solid rgba(255,255,255,0.03);text-decoration:none">⟵ Trở về</a>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi panel">
+        <div class="num" id="k_totalPlayers">0</div>
+        <div class="label">Tổng số cầu thủ</div>
+      </div>
+
+      <div class="kpi panel">
+        <div class="num" id="k_totalMatches">0</div>
+        <div class="label">Tổng trận</div>
+      </div>
+
+      <div class="kpi panel">
+        <div class="num" id="k_winRate">0%</div>
+        <div class="label">Tỉ lệ thắng (giả lập)</div>
+      </div>
+
+      <div class="kpi panel">
+        <div class="num" id="k_topScorer">—</div>
+        <div class="label">Cầu thủ ghi bàn nhiều nhất</div>
+      </div>
+    </div>
+
+    <div style="height:18px"></div>
+
+    <div class="panel">
+      <h4 style="color:var(--accent);margin:0 0 12px">Chi tiết</h4>
+      <p style="color:var(--muted)">Trang thống kê hiện hiển thị số liệu cơ bản từ dữ liệu đã nhập.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    app.renderStats();
+  </script>
+</body>
+</html>
